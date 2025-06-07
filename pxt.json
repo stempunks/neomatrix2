@@ -1,7 +1,7 @@
 {
-    "name": "luma-matrix",
+    "name": "Neo Matrix",
     "version": "0.1.2",
-    "description": "Extension for the LED-Matrix Workshop at ZHAW",
+    "description": "Extension for Neopixel 8x8 Matrix",
     "license": "MIT",
     "dependencies": {
         "core": "*",
