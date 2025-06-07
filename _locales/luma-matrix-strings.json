@@ -82,8 +82,8 @@
   "{id:group}Icon": "Icon",
   "{id:group}Pixels": "Pixels",
   "{id:group}Time": "Time",
-  "{id:subcategory}Clock": "Clock",
-  "{id:subcategory}Communication": "Communication",
-  "{id:subcategory}Games": "Games",
-  "{id:subcategory}Input": "Input"
+//  "{id:subcategory}Clock": "Clock",
+//  "{id:subcategory}Communication": "Communication",
+//  "{id:subcategory}Games": "Games",
+//  "{id:subcategory}Input": "Input"
 }
