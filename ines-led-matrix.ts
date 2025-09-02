@@ -286,6 +286,7 @@ namespace lumaMatrix {
         serialDebugMsg(`setBrightness: Brightness is set to = ${brightness}`);
     }
 
+/*
     export function setPixel(x: number, y: number, color: number): void {
         if (strip) {
             if (color < 0 || color > 16777215) {
@@ -304,6 +305,28 @@ namespace lumaMatrix {
             }
         }
     }
+*/
+    export function setPixel(x: number, y: number, color: number): void {
+    if (strip) {
+        if (color < 0 || color > 16777215) {
+                serialDebugMsg("setPixel: Error color value out of range");
+                color = 16777215;
+        }
+        
+        if (x >= 0 && x < matrixWidth && y >= 0 && y < matrixHeight) {
+            // New logic for a simple row-by-row layout
+            index = y * matrixWidth + x;
+            strip.setPixelColor(index, color);
+            pixelBuffer.setUint8(3 * index + 0, (color >> 16) & 0xff)
+                pixelBuffer.setUint8(3 * index + 1, (color >> 8) & 0xff)
+                pixelBuffer.setUint8(3 * index + 2, (color >> 0) & 0xff)
+                // serialDebugMsg("setPixel: set pixel(" + x + "," + y + ") to = #" + color);
+        } else {
+                serialDebugMsg("setPixel: Error pixel out of range");
+            // ... (rest of the function remains the same)
+        }
+    }
+}
 
     /**
      * Combine colour channels into a 24 bit colour number
