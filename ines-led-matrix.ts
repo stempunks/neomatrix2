@@ -286,7 +286,7 @@ namespace lumaMatrix {
         serialDebugMsg(`setBrightness: Brightness is set to = ${brightness}`);
     }
 
-/*
+
     export function setPixel(x: number, y: number, color: number): void {
         if (strip) {
             
@@ -310,8 +310,7 @@ namespace lumaMatrix {
         }
     }
     
-*/
-    
+    /*
     export function setPixel(x: number, y: number, color: number): void {
         if (strip) {
             if (color < 0 || color > 16777215) {
